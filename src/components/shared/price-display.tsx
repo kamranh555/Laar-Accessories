@@ -15,7 +15,7 @@ export function PriceDisplay({
   const hasDiscount = compareAtPrice && compareAtPrice > price;
 
   return (
-    <div className={cn("flex items-center gap-2", className)}>
+    <div className={cn("flex flex-wrap items-center gap-x-2 gap-y-1", className)}>
       <span
         className={cn(
           "font-semibold",
