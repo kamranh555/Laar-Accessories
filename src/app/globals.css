@@ -1,0 +1,174 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Furnixar-inspired Palette */
+  --color-terracotta: #C17F74;
+  --color-terracotta-light: #D4978D;
+  --color-terracotta-dark: #A86B61;
+  --color-brown: #2B2826;
+  --color-brown-light: #4A4643;
+  --color-brown-dark: #1A1715;
+  --color-olive: #9B8E88;
+  --color-olive-light: #B5ADAA;
+  --color-olive-dark: #7A706B;
+  --color-cream: #FAFAF8;
+  --color-cream-dark: #F5F0EC;
+}
+
+/* Furnixar Light Theme */
+:root {
+  --background: #FAFAF8;
+  --foreground: #2B2826;
+  --card: #FFFFFF;
+  --card-foreground: #2B2826;
+  --popover: #FFFFFF;
+  --popover-foreground: #2B2826;
+  --primary: #C17F74;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F5F0EC;
+  --secondary-foreground: #2B2826;
+  --muted: #F5F0EC;
+  --muted-foreground: #9B8E88;
+  --accent: #EDD5CF;
+  --accent-foreground: #2B2826;
+  --destructive: #DC2626;
+  --border: #EDE8E4;
+  --input: #EDE8E4;
+  --ring: #C17F74;
+  --chart-1: #C17F74;
+  --chart-2: #A86B61;
+  --chart-3: #9B8E88;
+  --chart-4: #D4978D;
+  --chart-5: #7A706B;
+  --radius: 0.5rem;
+  --sidebar: #2B2826;
+  --sidebar-foreground: #FAFAF8;
+  --sidebar-primary: #C17F74;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #4A4643;
+  --sidebar-accent-foreground: #FAFAF8;
+  --sidebar-border: #4A4643;
+  --sidebar-ring: #C17F74;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+  html {
+    @apply font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Type scale */
+  h1 {
+    @apply font-serif;
+    font-size: 2.75rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  h2 {
+    @apply font-serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+  }
+  h3 {
+    @apply font-serif;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
+  h4 {
+    @apply font-serif;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    font-weight: 500;
+  }
+  h5, h6 {
+    @apply font-serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 1.625rem;
+      line-height: 1.25;
+    }
+    h3 {
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+  }
+}
