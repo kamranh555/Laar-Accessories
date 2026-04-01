@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useCallback } from "react";
 import { Slider } from "@/components/ui/slider";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -27,6 +27,7 @@ export function ProductFilters({
 }: ProductFiltersProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const pathname = usePathname();
 
   const updateFilter = useCallback(
     (key: string, value: string | null) => {
@@ -52,7 +53,7 @@ export function ProductFilters({
     currentCategory || currentAudience || searchParams.has("min_price");
 
   function clearAll() {
-    router.push(window.location.pathname, { scroll: false });
+    router.push(pathname, { scroll: false });
   }
 
   return (
