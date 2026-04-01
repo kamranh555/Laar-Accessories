@@ -7,7 +7,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="group fixed bottom-6 left-6 z-50 flex items-center justify-center rounded-full bg-[#25D366] p-3.5 shadow-lg ring-4 ring-[#25D366]/20 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+      className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg ring-4 ring-[#25D366]/20 transition-all duration-300 hover:scale-105 hover:shadow-xl"
     >
       {/* Pulse ring */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping" />

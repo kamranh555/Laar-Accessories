@@ -93,11 +93,11 @@ export function ProductCard({ product, className }: ProductCardProps) {
         </div>
 
         {/* Info */}
-        <div className="mt-3 space-y-1">
-          <p className="text-xs uppercase tracking-wider text-muted-foreground">
+        <div className="mt-3 space-y-1 overflow-hidden">
+          <p className="text-xs uppercase tracking-wider text-muted-foreground truncate">
             {product.category?.name || product.targetAudience}
           </p>
-          <h3 className="font-medium text-brown group-hover:text-terracotta transition-colors line-clamp-1">
+          <h3 className="font-medium text-brown group-hover:text-terracotta transition-colors line-clamp-2">
             {product.name}
           </h3>
 
