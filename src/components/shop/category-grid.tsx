@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sparkles, Gem, Hammer, Shirt } from "lucide-react";
+import { Sparkles, Gem, Hammer, Shirt, Wind } from "lucide-react";
 
 const categories = [
   {
@@ -42,6 +42,16 @@ const categories = [
     iconColor: "text-brown",
     accentColor: "text-brown",
   },
+  {
+    name: "Perfumes",
+    slug: "perfumes",
+    description: "Attars, ouds & premium fragrances",
+    icon: Wind,
+    cardBg: "bg-[#F0EEF5]",
+    iconBg: "bg-purple-100",
+    iconColor: "text-purple-500",
+    accentColor: "text-purple-500",
+  },
 ];
 
 export function CategoryGrid() {
@@ -52,11 +62,11 @@ export function CategoryGrid() {
           Shop by Collection
         </h2>
         <p className="mt-2 text-muted-foreground">
-          Jewellery, gems, handcrafts &amp; clothing — all in one place
+          Jewellery, gems, handcrafts, clothing &amp; perfumes — all in one place
         </p>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {categories.map((category) => (
           <Link
             key={category.slug}

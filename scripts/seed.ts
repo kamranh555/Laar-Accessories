@@ -56,7 +56,7 @@ async function seed() {
   await db.delete(products);
   await db.delete(categories);
 
-  const [accessories, gems, handcrafts, menClothing, womenClothing] = await db
+  const [accessories, gems, handcrafts, menClothing, womenClothing, perfumes] = await db
     .insert(categories)
     .values([
       { name: "Accessories", slug: "accessories", description: "Jewellery, necklaces, rings, and premium accessories", displayOrder: 1 },
@@ -64,10 +64,11 @@ async function seed() {
       { name: "Handcrafts", slug: "handcrafts", description: "Traditional handmade artisan pieces", displayOrder: 3 },
       { name: "Men's Clothing", slug: "mens-clothing", description: "Kurtas, shalwar kameez, and shirts for men", displayOrder: 4 },
       { name: "Women's Clothing", slug: "womens-clothing", description: "Dresses, lawn suits, and dupattas for women", displayOrder: 5 },
+      { name: "Perfumes", slug: "perfumes", description: "Attars, ouds and premium fragrances", displayOrder: 6 },
     ])
     .returning();
 
-  console.log("Categories:", [accessories, gems, handcrafts, menClothing, womenClothing].map((c) => c.name).join(", "));
+  console.log("Categories:", [accessories, gems, handcrafts, menClothing, womenClothing, perfumes].map((c) => c.name).join(", "));
 
   const productData = [
     // --- Accessories (primary category) ---

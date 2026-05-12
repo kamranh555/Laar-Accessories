@@ -20,6 +20,8 @@ const navLinks = [
   { href: "/category/accessories", label: "Accessories" },
   { href: "/category/gems", label: "Gems" },
   { href: "/category/handcrafts", label: "Handcrafts" },
+  { href: "/category/mens-clothing", label: "Clothing" },
+  { href: "/category/perfumes", label: "Perfumes" },
 ];
 
 interface NavbarProps {
