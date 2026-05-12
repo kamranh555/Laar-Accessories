@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { db } from "@/lib/db";
 import { profiles } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
+import { isAdminAuthenticated } from "@/lib/auth/admin-session";
 
 export async function getUser() {
   const supabase = await createClient();
@@ -33,18 +34,8 @@ export async function requireAuth() {
 }
 
 export async function requireAdmin() {
-  const user = await getUser();
-  if (!user) throw new Error("Unauthorized");
-
-  const profile = await db
-    .select()
-    .from(profiles)
-    .where(eq(profiles.id, user.id))
-    .limit(1);
-
-  if (!profile[0] || profile[0].role !== "admin") {
-    throw new Error("Forbidden");
+  const isAdmin = await isAdminAuthenticated();
+  if (!isAdmin) {
+    throw new Error("Unauthorized");
   }
-
-  return { user, profile: profile[0] };
 }
