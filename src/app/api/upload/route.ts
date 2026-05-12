@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ url: result.secure_url });
   } catch (error) {
-    console.error("Upload error:", error);
+    console.error("Upload error:", error instanceof Error ? error.message : error);
 
     if (
       error instanceof Error &&
@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { error: "Failed to upload file" },
+      { error: error instanceof Error ? error.message : "Failed to upload file" },
       { status: 500 }
     );
   }
