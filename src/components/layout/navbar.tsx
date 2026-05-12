@@ -36,7 +36,7 @@ export function Navbar({ user }: NavbarProps) {
   const itemCount = useCartStore((s) => s.itemCount());
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-[#F5EFE8] backdrop-blur supports-[backdrop-filter]:bg-[#F5EFE8]">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       {/* Top bar */}
       <div className="bg-terracotta/10 px-4 py-1.5 text-center text-xs font-medium text-terracotta">
         Free shipping on orders above PKR 5,000
@@ -59,7 +59,7 @@ export function Navbar({ user }: NavbarProps) {
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/images/logo.png" alt="Laar Accessories" width={200} height={100} className="h-20 w-auto object-contain mix-blend-multiply" priority />
+          <Image src="/images/logo.png" alt="Laar Accessories" width={200} height={100} className="h-20 w-auto object-contain" priority />
         </Link>
 
         {/* Desktop nav */}
