@@ -36,7 +36,7 @@ export function Navbar({ user }: NavbarProps) {
   const itemCount = useCartStore((s) => s.itemCount());
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white backdrop-blur supports-[backdrop-filter]:bg-white">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-[#F5EFE8] backdrop-blur supports-[backdrop-filter]:bg-[#F5EFE8]">
       {/* Top bar */}
       <div className="bg-terracotta/10 px-4 py-1.5 text-center text-xs font-medium text-terracotta">
         Free shipping on orders above PKR 5,000
