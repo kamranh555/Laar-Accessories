@@ -42,7 +42,7 @@ export function Navbar({ user }: NavbarProps) {
         Free shipping on orders above PKR 5,000
       </div>
 
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Mobile menu button */}
         <Button
           variant="ghost"
@@ -59,7 +59,7 @@ export function Navbar({ user }: NavbarProps) {
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/images/logo.png" alt="Laar Accessories" width={200} height={100} className="h-20 w-auto object-contain" priority />
+          <Image src="/images/logo.png" alt="Laar Accessories" width={240} height={120} className="h-24 w-auto object-contain" priority />
         </Link>
 
         {/* Desktop nav */}
