@@ -31,8 +31,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <div>
-              <Image src="/images/logo.png" alt="Laar Accessories" width={120} height={60} className="h-14 w-auto object-contain brightness-0 invert" />
+            <div className="inline-block rounded-xl bg-cream/10 p-2">
+              <Image src="/images/logo.png" alt="Laar Accessories" width={120} height={60} className="h-14 w-auto object-contain" />
             </div>
             <p className="text-sm text-cream/70">
               Exquisite jewellery, rare gems &amp; handcrafted accessories

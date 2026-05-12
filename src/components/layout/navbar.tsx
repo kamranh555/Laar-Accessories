@@ -59,7 +59,7 @@ export function Navbar({ user }: NavbarProps) {
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/images/logo.png" alt="Laar Accessories" width={120} height={60} className="h-12 w-auto object-contain" priority />
+          <Image src="/images/logo.png" alt="Laar Accessories" width={160} height={80} className="h-16 w-auto object-contain" priority />
         </Link>
 
         {/* Desktop nav */}
