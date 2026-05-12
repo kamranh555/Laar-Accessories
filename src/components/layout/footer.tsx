@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   shop: [
@@ -30,11 +31,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-baseline gap-0.5">
-              <span className="font-serif text-2xl font-bold text-terracotta">Laar</span>
-              <span className="ml-1.5 pb-0.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-cream/70">
-                Accessories
-              </span>
+            <div>
+              <Image src="/images/logo.png" alt="Laar Accessories" width={120} height={60} className="h-14 w-auto object-contain brightness-0 invert" />
             </div>
             <p className="text-sm text-cream/70">
               Exquisite jewellery, rare gems &amp; handcrafted accessories

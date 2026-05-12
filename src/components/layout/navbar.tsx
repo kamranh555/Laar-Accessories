@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Search,
@@ -57,11 +58,8 @@ export function Navbar({ user }: NavbarProps) {
         </Button>
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-0.5">
-          <span className="font-serif text-2xl font-bold tracking-tight text-brown">Laar</span>
-          <span className="ml-1.5 self-end pb-0.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-terracotta">
-            Accessories
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image src="/images/logo.png" alt="Laar Accessories" width={120} height={60} className="h-12 w-auto object-contain" priority />
         </Link>
 
         {/* Desktop nav */}
