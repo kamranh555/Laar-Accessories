@@ -3,7 +3,7 @@ import Link from "next/link";
 export function WhatsAppButton() {
   return (
     <Link
-      href="https://wa.me/923000445759?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order."
+      href="https://wa.me/923043429913?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
